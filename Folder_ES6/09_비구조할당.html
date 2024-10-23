@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>console.log(dog.name, dog.age);</p>
+    <p>console.log(dog["name"], dog["age"]);</p>
+    <p>같음</p>
+    <script>
+      const dog = {
+        name: "멍멍이",
+        age: 2,
+      };
+      console.log(dog.name, dog.age);
+      console.log(dog["name"], dog["age"]);
+      //비구조 할당
+      const { name, age } = dog;
+      console.log(name, age);
+    </script>
+
+    <script>
+      const data = {
+        name2: "홍길동",
+        kor: 95,
+        eng: 30,
+        math: 40,
+      };
+      console.log(data.name2, data.kor, data.eng, data.math);
+      console.log(data["name2"], data["kor"], data["eng"], data["math"]);
+
+      //구조분해할당
+      const { name2, kor, eng, math } = data;
+      console.log(name2, kor, eng, math);
+    </script>
+  </body>
+</html>
+
+<!-- 
+    비구조 할당 (구조 분해)
+    예) 1. const object = {a:1, b:2, c:3}
+        2. const {a, b, c} = object   낱개로 받음
+    사용) 1. object.a
+          2. a
+-->

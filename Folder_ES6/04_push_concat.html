@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>배열 : Push / Concat</h3>
+    <p>concat : 원본은 유지</p>
+    <script>
+      const arr1 = [10, 20, 30];
+      arr1.push(40);
+      arr1.push(50);
+      arr1.push(60);
+      console.log("arr1 : " + arr1);
+
+      const arr2 = [10, 20, 30];
+      const arr3 = arr2.concat();
+      console.log("arr2 : " + arr2);
+      console.log("arr3 : " + arr3);
+
+      const arr4 = arr2.concat(40, 50, 60);
+      console.log("arr2 : " + arr2);
+      console.log("arr4 : " + arr4);
+
+      // 배열에 객체(json)
+      const data1 = [
+        {
+          id: 1,
+          name: "홍길동",
+          age: 25,
+        },
+        {
+          id: 2,
+          name: "길동무",
+          age: 40,
+        },
+        {
+          id: 3,
+          name: "동아리",
+          age: 20,
+        },
+      ];
+      for (let i = 0; i < data1.length; i++) {
+        console.log(`${data1[i].id}  ${data1[i].name}  ${data1[i].age}`);
+      }
+
+      //문제
+      const data2 = data1.concat({ id: 4, name: "라이언", age: 28 });
+      console.log(data2);
+    </script>
+  </body>
+</html>
+
+<!-- 
+    배열, 메서드() 중 불변성 유지
+    ① push : 배열 뒷부분에 값을 삽입 (배열의 값이 변경된다)
+    ② concat : 다수의 배열을 합치고 병합된 배열의 사본을 반환
+               기존의 배열은 건드리지 않음 - 불변성 유지
+ -->

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>find & findIndex</h3>
+    <script>
+      const arr = [10, 20, 30, 20, 50, 60];
+
+      const result1 = arr.find((item) => item > 30);
+      console.log(result1);
+
+      // 요소 중에서 20인 값 찾기
+      const result2 = arr.find((item) => item === 20);
+      console.log(result2);
+
+      // findIndex : find로 찾은 값의 인덱스
+      const result3 = arr.findIndex((item) => item === 20);
+      console.log(result3);
+    </script>
+
+    <script>
+      const data = [
+        { id: 1, name: "홍길동", age: 25 },
+        { id: 2, name: "프로도", age: 35 },
+        { id: 3, name: "어피치", age: 34 },
+      ];
+
+      // id가 1인 값
+      const data2 = data.find((item) => item.id === 1);
+      console.log(data2);
+      // name이 라이언인 값 [결과 : undefined]
+      const data3 = data.find((item) => item.name === "라이언");
+      console.log(data3);
+      // name이 라이언인 값의 인덱스 [결과 : -1]
+      const data4 = data.findIndex((item) => item.name === "라이언");
+      console.log(data4);
+    </script>
+  </body>
+</html>
+
+<!-- 
+    find 
+    filter와 비슷, 결과는 하나의 값(처음 만나는 값을 가져온다)
+-->

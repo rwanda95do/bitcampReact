@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>반복문 : map</h3>
+    <p>리액트에서는 return문이 없으면 값이 나오지 않으니, 반드시 써야한다.</p>
+    <p>반복되는 문장이 1개이면 {}, return 생략가능</p>
+    <script>
+      const arr = [10, 20, 30];
+      const data = [
+        { id: 1, name: "홍길동", age: 25 },
+        { id: 2, name: "프로도", age: 35 },
+        { id: 3, name: "라이언", age: 34 },
+      ];
+
+      data.map((item, index) => {
+        return console.log(index, item);
+      });
+      // 반복되는 문장이 1개이면 {}, return 생략가능
+      arr.map((item, index) => console.log(index, item));
+      
+      
+      data.map((item, index) => {
+        return console.log(item.id + ", " + item.name + ", " + item.age);
+      });
+      // 반복되는 문장이 1개이면 {}, return 생략가능
+      data.map((item, index) => console.log(item.id + ", " + item.name + ", " + item.age));
+    </script>
+  </body>
+</html>
+
+<!-- 
+    map (반복문)
+
+    [형식]
+    배열.map((요소, 인덱스) => {
+    return 요소
+    });
+ -->

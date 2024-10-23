@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function make1() {
+        console.log("Have a nice day!!");
+      }
+      make1();
+
+      function make2(num) {
+        console.log(`num : ${num}`);
+      }
+      make2(100);
+
+      function make3(a, b) {
+        console.log(`${a} + ${b} = ${a + b}`);
+      }
+      make3(25, 36);
+    </script>
+
+    <script>
+      // 화살표 함수
+      const make11 = () => {
+        console.log("HAVE A NICE DAY!!");
+      };
+      make11();
+
+      const make22 = (num) => {
+        console.log(`num : ${num}`);
+      };
+      make22(100);
+
+      const make33 = (a, b) => {
+        console.log(`${a} + ${b} = ${a + b}`);
+      };
+      make33(25, 36);
+    </script>
+  </body>
+</html>

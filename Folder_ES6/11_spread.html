@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const data1 = [
+        { id: 1, name: "홍길동", age: 25 },
+        { id: 2, name: "프로도", age: 35 },
+        { id: 3, name: "라이언", age: 34 },
+        { id: 3, name: "어피치", age: 14 },
+        { id: 3, name: "죠르디", age: 54 },
+      ];
+      console.log(data1);
+
+      // 복제
+      const data2 = [...data1];
+      console.log(data2);
+
+      //추가 : { id: 6, name: "브라운", age: 20 }
+      const data3 = [...data1, { id: 6, name: "브라운", age: 20 }];
+      console.log(data3);
+    </script>
+
+    <script>
+      //문제 : id가 6번인 브라운을 제이지로 변경하고 나이를 20에서 35로 변경
+      const data4 = data3.map((item, index) => {
+        if (item.id === 6) {
+          return { ...item, name: "제이지", age: 35 };
+        } else {
+          return item;
+        }
+      });
+      console.log(data4);
+
+      //if문은 안쓰고 삼항연산자로 대체
+      const data5 = data3.map((item) =>
+        item.id === 6 ? { ...item, name: "제이지", age: 35 } : item
+      );
+      console.log(data5);
+    </script>
+  </body>
+</html>
