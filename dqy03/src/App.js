@@ -5,6 +5,10 @@ import Test04 from "./components/Test04";
 import Test05 from "./components/Test05";
 import Test06 from "./components/Test06";
 import Test07Main from "./components/Test07Main";
+import Test08Gallery from "./components/Test08Gallery";
+import Test09 from "./components/Test09";
+import Test10 from "./components/Test10";
+import Test11 from "./components/Test11";
 
 function App() {
   return (
@@ -16,8 +20,15 @@ function App() {
       <Test04></Test04>
       <Test05></Test05> 
       <Test06></Test06>
+      <Test07Main></Test07Main> 
       */}
-      <Test07Main></Test07Main>
+      
+      <Test08Gallery></Test08Gallery>
+      {/*
+      <Test09></Test09>
+      <Test10></Test10>
+       <Test11></Test11>
+      */}
     </div>
   );
 }

@@ -20,9 +20,9 @@ const Test06 = () => {
     const { name, value } = e.target;
 
     setDto({
-      ...dto, // 기존의 값은 복제하고 (객체에서 스프레드시트는 덮어쓰기/수정, 리스트는 복사)
-      //복사하지 다른 녀석들의 값을 저장하지 못한다.. 그저 화면상에 보여주기만 할뿐...
-      [name]: value,
+      ...dto, // 기존의 값(객체)은 복제하고 (객체에서 스프레드시트는 덮어쓰기/수정, 리스트는 복사)
+      //복사하지 다른 녀석들의 값을 저장하지 못한다(=초기화됨).. 그저 화면상에 보여주기만 할뿐...
+      [name]: value, // 원하는 값(name)만 수정한다. 현재 가능한 값:name, id, pwd
     });
   };
   const onReset = () => {
@@ -34,7 +34,6 @@ const Test06 = () => {
     nameRef.current.focus();
   };
 
-  
   return (
     <div>
       <table border={1} cellPadding={5} cellSpacing="0">
@@ -68,6 +67,10 @@ const Test06 = () => {
           </td>
         </tr>
       </table>
+      <hr></hr>
+      <h3>이름:{name}</h3>
+      <h3>아이디:{id}</h3>
+      <h3>비밀번호:{pwd}</h3>
     </div>
   );
 };
