@@ -1,10 +1,9 @@
-import logo from "./logo.svg";
-import "./App.css";
+import Movies from "./components/Movies";
 import Test01 from "./components/Test01";
 import Test02 from "./components/Test02";
 import Test03 from "./components/Test03";
 import Test04 from "./components/Test04";
-import Todos from "./components/Todos";
+import Test05 from "./components/Test05";
 
 function App() {
   return (
@@ -12,10 +11,11 @@ function App() {
       {/* 
       <Test01></Test01>
       <Test02></Test02>
+      <Movies></Movies>
       <Test03></Test03>
-      <Test04></Test04> 
-      */}
-      <Todos></Todos>
+      <Test04></Test04>
+       */}
+      <Test05></Test05>
     </div>
   );
 }
