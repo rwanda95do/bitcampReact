@@ -23,8 +23,16 @@ const App05 = () => {
         {/* 화면에 보이는 영역 */}
         <Routes>
           <Route path="/" element={<Main></Main>}></Route>
+          {/* 
           <Route path="/productList" element={<ProductList />} />
-          <Route path="/productList/:detailId" element={<ProductDetail />} />
+          <Route path="/productList/:productId" element={<ProductDetail />} /> 
+          */}
+
+          {/* Index Router */}
+          <Route path="/productList">
+            <Route index element={<ProductList />}></Route>
+            <Route path=":productId" element={<ProductDetail />} />
+          </Route>
         </Routes>
       </>
     </BrowserRouter>
