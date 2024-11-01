@@ -11,17 +11,18 @@ const TodosProvider = ({ children }) => {
   const changeInputValue = (e) => {
     setInputValue(e.target.value);
   };
+
   const add = (text) => {
     if (text) {
-      setList((prevList) => [...prevList, { seq: seq, todo: inputValue }]);
+      setList((prevList) => [...prevList, { a: seq, b: text }]);
       setInputValue("");
       setSeq(seq + 1);
-      //   console.log(list);
+      console.log(list);
     }
   };
 
   return (
-    <TodosContext.Provider value={{ add, changeInputValue, inputValue, list }}>
+    <TodosContext.Provider value={{ add, changeInputValue, inputValue, seq }}>
       {children}
     </TodosContext.Provider>
   );

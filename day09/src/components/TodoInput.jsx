@@ -6,8 +6,7 @@ import { useTodos } from "../contexts/TodosContext";
 const TodoInput = () => {
   const { color } = useContext(ColorContext);
   const { count } = useContext(CountContext);
-
-  const { add, changeInputValue, inputValue, seq, list } = useTodos();
+  const { add, changeInputValue, inputValue, seq } = useTodos();
   // ------------
 
   return (
@@ -21,7 +20,7 @@ const TodoInput = () => {
         value={inputValue}
         onChange={changeInputValue}
       />
-      <button onClick={() => add(inputValue)}>추가</button>
+      <button onClick={() => add(inputValue, seq)}>추가</button>
     </div>
   );
 };
